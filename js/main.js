@@ -189,7 +189,7 @@ const container = document.querySelector("#productes .splide__list");
 let allProducts = [];
 
 async function loadProducts() {
-  const response = await fetch("../products.json");
+  const response = await fetch("./products.json");
   const products = await response.json();
   allProducts = products;
 
