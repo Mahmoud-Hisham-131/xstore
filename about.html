@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/splide.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Xstore | About Us</title>
+</head>
+
+<body>
+    <div class="color-top"></div>
+    <div class="body-overlay"></div>
+    <div class="scrollTop show ">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <!-- start nav -->
+    <nav class="home-nav">
+        <div class="container reveal">
+            <div class="side-menu">
+                <i class="uil uil-grip-horizontal-line"></i>
+            </div>
+            <div class="logo">
+                <img src="./images/Logo.jpg" alt="">
+            </div>
+            <div class="links">
+                <ul>
+                    <li ><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">OUR PRODUCTS</a></li>
+                    <li><a href="journal.html">JOURNAL</a></li>
+                    <li class="active"><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contacts.html">CONTACTS</a></li>
+            </div>
+            <div class="actives">
+                <div class="money">
+                    <div class="currency">EGP
+                        <i class="uil uil-angle-down down"></i>
+                        <i class="uil uil-angle-up up" style="display: none;"></i>
+                    </div>
+                    <div class="all_currency">
+                        <span>USD $</span>
+                        <span>UK £</span>
+                    </div>
+                </div>
+                <div class="icons">
+                    <ul>
+                        <li class="search"><i class="uil uil-search"></i></li>
+                        <li class="user"><i class="uil uil-user"></i></li>
+                        <li class="cart"><i class="uil uil-shopping-bag"></i>
+                            <span>0</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav -->
+
+    <!--side menu -->
+    <div class="menu" id="menu">
+        <i class="uil uil-times"></i>
+
+        <div class="container">
+            <div class="logo">
+                <img src="./images/Logo.jpg" alt="Logo">
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search for products...">
+                <i class="uil uil-search"></i>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">OUR PRODUCTS</a></li>
+                    <li><a href="journal.html">JOURNAL</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contacts.html">CONTACTS</a></li>
+                    <li><a href="login.html"><i class="uil uil-user"></i> ACCOUNT</a></li>
+                    <li><a href="cart.html"><i class="uil uil-shopping-bag"></i> CART £0.00</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--side menu -->
+
+    <!-- cart menu -->
+    <div class="cart-menu" id="cart-menu">
+        <i class="uil uil-times"></i>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><i class="uil uil-shopping-bag"></i> CART</a>
+            </div>
+
+            <div class="cart-title">No products in cart.</div>
+            <ul class="cart-items" hidden></ul>
+            <div class="cart-footer" hidden>
+                <div class="cart-total"><span>Subtotal:</span><strong>0.00 $</strong></div>
+                <button class="checkout-btn">CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+    <!-- cart menu -->
+
+    <!-- user menu -->
+    <div class="user-menu" id="user-menu">
+        <i class="uil uil-times"></i>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><i class="uil uil-user"></i> SIGN IN</a>
+            </div>
+
+            <form class="sign-form" action="#" method="post">
+                <div class="field">
+                    <label for="user-login">Username or email <span>*</span></label>
+                    <input type="text" id="user-login" name="login" required>
+                </div>
+                <div class="field">
+                    <label for="user-pass">Password <span>*</span></label>
+                    <input type="password" id="user-pass" name="password" required>
+                </div>
+                <div class="check-field">
+                    <input type="checkbox" id="checkbox" name="checkbox" required>
+                    <label for="checkbox">Remember me <span>*</span></label>
+                </div>
+                <button type="submit" class="signin-btn">LOGIN</button>
+            </form>
+
+            <a href="https://xstore.8theme.com/elementor3/minimal-tech/my-account/lost-password/" class="lost-pass">Lost
+                your password?</a>
+        </div>
+    </div>
+    <!-- user menu -->
+
+    <!-- search menu -->
+    <div class="search-menu" id="search-menu">
+        <i class="uil uil-times"></i>
+        <div class="container">
+            <h2 class="search-title">What Are You Looking For?</h2>
+
+            <form class="search-form" action="#" method="get">
+                <select name="category">
+                    <option value="">All Categories</option>
+                    <option value="camera">Camera</option>
+                    <option value="computer">Computer</option>
+                    <option value="controller">Controller</option>
+                    <option value="drone">Drone</option>
+                    <option value="earbuds">Earbuds</option>
+                    <option value="headphone">Headphone</option>
+                    <option value="tablets">Tablets</option>
+                    <option value="speakers">Speakers</option>
+                    <option value="phones">Phones</option>
+                    <option value="chargers">Chargers</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+                <input type="text" name="s" placeholder="Search for products">
+                <button type="submit"><i class="uil uil-search"></i> SEARCH</button>
+            </form>
+
+            <h3 class="popular-title">Popular categories</h3>
+
+            <ul class="popular-categories">
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon.svg"
+                            alt="">
+                        <h4>CAMERA</h4>
+                        <span>12 products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon-4.svg"
+                            alt="">
+                        <h4>COMPUTER</h4>
+                        <span>12 products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon-2.svg"
+                            alt="">
+                        <h4>CONTROLLER</h4>
+                        <span>13 products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon-8.svg"
+                            alt="">
+                        <h4>DRONE</h4>
+                        <span>14 products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon-6.svg"
+                            alt="">
+                        <h4>EARBUDS</h4>
+                        <span>15 products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon-1.svg"
+                            alt="">
+                        <h4>HEADPHONE</h4>
+                        <span>15 products</span>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="view-all-btn">VIEW ALL CATEGORIES</button>
+        </div>
+    </div>
+    <!-- search menu -->
+
+
+    <!-- start about page -->
+    <section class="shop about">
+        <div class="about-banner banner">
+            <h1>Your Premier Destination for<br>All Your <span>Electronic</span> Needs</h1>
+            <p>To make the latest technology accessible and affordable for everyone, without compromising on quality or
+                service.</p>
+        </div>
+
+        <!-- full width image -->
+        <div class="hero-image ">
+            <img src="./images/Image-8.jpg" alt="">
+        </div>
+
+        <div class="container">
+            <!-- story -->
+            <div class="story ">
+                <h2>Experience Electronics <span>Like Never Before</span></h2>
+                <div class="text">
+                    <p>As technology evolved, so did we. From the days of cassette player &amp; bulky television to
+                        today's smart devices &amp; ultra-slim 4K screen, we've stayed at the forefront of every tech
+                        revolution. Our shelves have seen rise of phones, consoles, smart home devices, wearables, &amp;
+                        everything in between.</p>
+                    <p>With multiple branches across United Stats, and a fast-growing online presence, we continue to
+                        serve millions of satisfied customers who rely on us for top brands, expert advice, competitive
+                        pricing, and post-sale support.</p>
+                </div>
+            </div>
+
+            <!-- gallery, scrolls with the mouse (the 3 photos are repeated so the endless loop always has enough slides) -->
+            <div class="gallery splide " id="aboutSlider" aria-label="Gallery">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="./images/1-ratioyglbl8v1urism7utpvn98sjwtqyyzuz3yh6dw.jpg"
+                                alt="" loading="lazy"></li>
+                        <li class="splide__slide"><img src="./images/2-ratioyglbl8v1urism7utpvn98sjwtqyyzuz3yh6dw.jpg"
+                                alt="" loading="lazy"></li>
+                        <li class="splide__slide"><img src="./images/3-ratiozefifa5dgq5n4mhe7n3umnx4iupb4igl8fs7o.jpg"
+                                alt="" loading="lazy"></li>
+                        <li class="splide__slide"><img src="./images/1-ratioyglbl8v1urism7utpvn98sjwtqyyzuz3yh6dw.jpg"
+                                alt="" loading="lazy"></li>
+                        <li class="splide__slide"><img src="./images/2-ratioyglbl8v1urism7utpvn98sjwtqyyzuz3yh6dw.jpg"
+                                alt="" loading="lazy"></li>
+                        <li class="splide__slide"><img src="./images/3-ratiozefifa5dgq5n4mhe7n3umnx4iupb4igl8fs7o.jpg"
+                                alt="" loading="lazy"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- vision -->
+            <div class="vision ">
+                <div class="grid">
+                    <div class="cell cell-1">
+                        <svg class="left" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                            fill="none">
+                            <path
+                                d="M14.8176 4.83072C15.3612 4.83072 15.8004 5.29656 15.8004 5.87331V10.1176C15.8004 12.3358 17.4172 14.1547 19.4731 14.3175C19.6334 14.3322 19.7727 14.1991 19.7727 14.0217V8.30598C19.7727 5.97682 17.9956 4.09131 15.8004 4.09131H14.1277H13.0266H12.1415C10.0507 4.09131 8.33627 5.80676 8.18294 7.98805C8.16901 8.15811 8.29444 8.30598 8.46171 8.30598H10.1552C11.8697 8.30598 13.3332 7.1525 13.8907 5.53317C14.0301 5.11171 14.3995 4.83072 14.8176 4.83072Z"
+                                fill="#222222"></path>
+                            <path
+                                d="M4.83023 15.1829C4.83023 14.6394 5.29607 14.2002 5.87281 14.2002H10.1171C12.3353 14.2002 14.1543 12.5834 14.3169 10.5275C14.3318 10.3672 14.1987 10.2278 14.0212 10.2278H8.3055C5.97633 10.2278 4.09082 12.0049 4.09082 14.2002V15.8729V16.974V17.8591C4.09082 19.9499 5.80626 21.6644 7.98754 21.8176C8.15761 21.8316 8.3055 21.7061 8.3055 21.5389V19.8454C8.3055 18.1309 7.15201 16.6674 5.53268 16.1099C5.11121 15.9705 4.83023 15.6011 4.83023 15.1829Z"
+                                fill="#222222"></path>
+                            <path
+                                d="M15.1824 25.1702C14.6388 25.1702 14.1998 24.7044 14.1998 24.1276V19.8834C14.1998 17.6651 12.5829 15.8461 10.527 15.6835C10.3667 15.6687 10.2273 15.8017 10.2273 15.9792V21.695C10.2273 24.0241 12.0045 25.9096 14.1998 25.9096H15.8724H16.9736H17.8586C19.9494 25.9096 21.6638 24.1942 21.8172 22.0129C21.8311 21.8429 21.7057 21.695 21.5383 21.695H19.8448C18.1304 21.695 16.6668 22.8485 16.1093 24.4677C15.9699 24.8892 15.6006 25.1702 15.1824 25.1702Z"
+                                fill="#222222"></path>
+                            <path
+                                d="M22.0121 8.18343C21.8421 8.16949 21.6943 8.29494 21.6943 8.46221V10.1557C21.6943 11.8702 22.8478 13.3338 24.467 13.8913C24.8811 14.0376 25.1695 14.4 25.1695 14.8181C25.1695 15.3618 24.7036 15.8009 24.1269 15.8009H19.8826C17.6644 15.8009 15.8454 17.4176 15.6828 19.4736C15.668 19.6339 15.8011 19.7733 15.9785 19.7733H21.6943C24.0234 19.7733 25.9089 17.9961 25.9089 15.8009V14.1283V13.027V12.142C25.9089 10.0512 24.1935 8.33676 22.0121 8.18343Z"
+                                fill="#222222"></path>
+                        </svg>
+                        <h3>Our Vision</h3>
+                        <p>General Vision Statement (Well-Rounded) - To be a globally trusted name in electronics,
+                            driving innovation and enriching lives through smart, sustainable technology. Tech &
+                            Innovation Focus - To shapes the future of technology by delivering intelligent, reliable,
+                            and more electronic solutions to the world.</p>
+                    </div>
+                    <div class="cell cell-2">
+                        <svg class="right" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                            fill="none">
+                            <path
+                                d="M14.8176 4.83072C15.3612 4.83072 15.8004 5.29656 15.8004 5.87331V10.1176C15.8004 12.3358 17.4172 14.1547 19.4731 14.3175C19.6334 14.3322 19.7727 14.1991 19.7727 14.0217V8.30598C19.7727 5.97682 17.9956 4.09131 15.8004 4.09131H14.1277H13.0266H12.1415C10.0507 4.09131 8.33627 5.80676 8.18294 7.98805C8.16901 8.15811 8.29444 8.30598 8.46171 8.30598H10.1552C11.8697 8.30598 13.3332 7.1525 13.8907 5.53317C14.0301 5.11171 14.3995 4.83072 14.8176 4.83072Z"
+                                fill="#222222"></path>
+                            <path
+                                d="M4.83023 15.1829C4.83023 14.6394 5.29607 14.2002 5.87281 14.2002H10.1171C12.3353 14.2002 14.1543 12.5834 14.3169 10.5275C14.3318 10.3672 14.1987 10.2278 14.0212 10.2278H8.3055C5.97633 10.2278 4.09082 12.0049 4.09082 14.2002V15.8729V16.974V17.8591C4.09082 19.9499 5.80626 21.6644 7.98754 21.8176C8.15761 21.8316 8.3055 21.7061 8.3055 21.5389V19.8454C8.3055 18.1309 7.15201 16.6674 5.53268 16.1099C5.11121 15.9705 4.83023 15.6011 4.83023 15.1829Z"
+                                fill="#222222"></path>
+                            <path
+                                d="M15.1824 25.1702C14.6388 25.1702 14.1998 24.7044 14.1998 24.1276V19.8834C14.1998 17.6651 12.5829 15.8461 10.527 15.6835C10.3667 15.6687 10.2273 15.8017 10.2273 15.9792V21.695C10.2273 24.0241 12.0045 25.9096 14.1998 25.9096H15.8724H16.9736H17.8586C19.9494 25.9096 21.6638 24.1942 21.8172 22.0129C21.8311 21.8429 21.7057 21.695 21.5383 21.695H19.8448C18.1304 21.695 16.6668 22.8485 16.1093 24.4677C15.9699 24.8892 15.6006 25.1702 15.1824 25.1702Z"
+                                fill="#222222"></path>
+                            <path
+                                d="M22.0121 8.18343C21.8421 8.16949 21.6943 8.29494 21.6943 8.46221V10.1557C21.6943 11.8702 22.8478 13.3338 24.467 13.8913C24.8811 14.0376 25.1695 14.4 25.1695 14.8181C25.1695 15.3618 24.7036 15.8009 24.1269 15.8009H19.8826C17.6644 15.8009 15.8454 17.4176 15.6828 19.4736C15.668 19.6339 15.8011 19.7733 15.9785 19.7733H21.6943C24.0234 19.7733 25.9089 17.9961 25.9089 15.8009V14.1283V13.027V12.142C25.9089 10.0512 24.1935 8.33676 22.0121 8.18343Z"
+                                fill="#222222"></path>
+                        </svg>
+                        <h3>Our Mission</h3>
+                        <p>Balanced & Professional (General) - Our mission is to deliver more innovative, high-quality
+                            electronics products that enhance everyday life, while ensuring exceptional customer service
+                            and long-term value. To develop and delivers cutting-edge electronic solutions that drive
+                            progress, inspire innovation.</p>
+                    </div>
+                    <div class="cell cell-3">
+                        <svg class="left" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.40927 14.9615C3.39002 18.7372 6.44331 21.8182 10.2086 21.8182C11.7481 21.8182 13.2298 21.2972 14.4293 20.3452H14.4486L22.2357 13.3212C21.2863 12.2664 19.6634 12.1763 18.6116 13.1282L12.9924 18.1969C12.2227 18.8722 11.2349 19.2454 10.2086 19.2454C7.85448 19.2454 5.93656 17.3092 5.97505 14.9357C6.01353 12.6072 7.95069 10.7548 10.2727 10.7548H12.0367C13.4543 10.7548 14.6024 9.60341 14.6024 8.18188H10.2856C6.53311 8.18188 3.42851 11.1986 3.40927 14.9615ZM15.8918 21.8182H20.2087C23.9548 21.8182 27.0593 18.8015 27.0786 15.0386C27.0978 11.2629 24.0446 8.18188 20.2793 8.18188C18.7462 8.18188 17.2581 8.7029 16.0586 9.65487L15.7892 9.88C15.7763 9.89286 15.7619 9.90573 15.7474 9.9186C15.7331 9.93146 15.7186 9.94432 15.7058 9.95718L8.25218 16.6789C9.20152 17.7337 10.8244 17.8239 11.8763 16.8719L17.4954 11.8032C18.2652 11.1279 19.2529 10.7548 20.2793 10.7548C22.6334 10.7548 24.5513 12.6909 24.5128 15.0644C24.4743 17.3929 22.5372 19.2454 20.2152 19.2454H18.4576C17.0399 19.2454 15.8918 20.3967 15.8918 21.8182Z"
+                                fill="#222222"></path>
+                        </svg>
+                        <h3>Our Innovation</h3>
+                        <p>At the heart of company lies a relentless commitment to innovation. We believes that
+                            technology should not only meet today’s needs but also anticipate tomorrow’s possibilities.
+                            From pioneering product design to integrating automation, our innovation strategy focuses on
+                            creating intelligent, energy-efficient.</p>
+                    </div>
+                    <div class="cell cell-4">
+                        <svg class="right" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                            fill="none">
+                            <path
+                                d="M25.7524 20.682C25.2941 20.4201 24.8722 20.1073 24.4866 19.7508L24.4721 19.7363L24.4648 19.7289C23.0752 18.434 22.2822 16.6808 22.2168 14.7819C22.1586 12.8831 22.8424 11.0789 24.1447 9.70392L24.1664 9.67482C24.8139 8.97642 25.3814 8.2198 25.8616 7.405C25.9416 7.27405 25.8979 7.09945 25.7669 7.01943L24.4429 6.21189C24.3119 6.13187 24.1301 6.17552 24.0573 6.30647C23.6572 6.99033 23.1771 7.63053 22.6314 8.2198C22.6169 8.23435 22.6096 8.24163 22.5951 8.25618C22.5951 8.25618 22.5951 8.25618 22.5878 8.26345C22.5878 8.26345 22.5878 8.26345 22.5806 8.27073C21.0964 9.84942 19.2049 10.9552 17.1169 11.4499C16.3894 11.6245 15.6328 11.7264 14.8762 11.7482C13.9887 11.7773 13.1884 11.239 12.8464 10.4169C12.7956 10.3005 12.7447 10.1768 12.6937 10.0604C12.6209 9.90762 12.7519 9.73302 12.9192 9.76212C13.5377 9.87124 14.1778 9.91489 14.8253 9.90034C17.2916 9.82032 19.5759 8.78727 21.2564 6.98305L21.2783 6.96123C21.7366 6.46652 22.1367 5.92089 22.4787 5.34617C22.5587 5.21522 22.5151 5.04062 22.3841 4.96059L21.0601 4.15305C20.9218 4.07303 20.7472 4.11668 20.6672 4.2549C20.4053 4.71323 20.0924 5.13519 19.7287 5.52077L19.7068 5.54259C18.4119 6.93213 16.6586 7.7251 14.7598 7.79058C12.8683 7.8415 11.0641 7.15765 9.68185 5.85542L9.6673 5.84087L9.66002 5.83359C8.96161 5.18612 8.20501 4.61865 7.39021 4.13123C7.25925 4.0512 7.08465 4.09485 7.00462 4.2258L6.1971 5.55714C6.11707 5.68809 6.16072 5.86997 6.29167 5.94272C6.9828 6.35012 7.62301 6.83028 8.21229 7.3759L8.21956 7.38318L8.22684 7.39045C9.8128 8.87457 10.9186 10.7734 11.4279 12.8686C11.6025 13.5961 11.7043 14.3454 11.7261 15.102C11.7261 15.1093 11.7261 15.1165 11.7261 15.1239C11.7552 16.0041 11.2096 16.8044 10.3948 17.139C10.2784 17.19 10.1547 17.2409 10.0383 17.2918C9.88555 17.3645 9.71095 17.2336 9.74005 17.0663C9.84917 16.4479 9.89282 15.8076 9.87827 15.1603C9.80552 12.7085 8.77974 10.4314 6.9828 8.75089C6.96825 8.73634 6.9537 8.72179 6.93187 8.70724C6.43717 8.25618 5.89882 7.85605 5.32408 7.5214C5.19313 7.44138 5.01854 7.48503 4.93851 7.61598L4.13826 8.94004C4.05823 9.07827 4.10188 9.25287 4.24011 9.33289C4.69116 9.59479 5.12038 9.90762 5.50596 10.2641L5.53506 10.2859C6.9246 11.5809 7.71759 13.3341 7.78306 15.233C7.84126 17.1318 7.1574 18.9286 5.85517 20.311L5.82607 20.34C5.17859 21.0385 4.61114 21.795 4.13099 22.6099C4.05096 22.7408 4.09461 22.9154 4.22556 22.9954L5.54962 23.803C5.68057 23.883 5.85517 23.8394 5.9352 23.7084C6.33532 23.0245 6.81547 22.3844 7.36111 21.795C7.37566 21.7805 7.38293 21.7733 7.39748 21.7586C7.39748 21.7586 7.39748 21.7586 7.39748 21.7514C8.88159 20.1728 10.7731 19.0669 12.8683 18.5649C13.5958 18.3904 14.3524 18.2885 15.1091 18.2666C15.9966 18.2375 16.7968 18.7759 17.1388 19.598C17.1897 19.7144 17.2407 19.8381 17.2916 19.9545C17.3643 20.1073 17.2333 20.2819 17.0661 20.2528C16.4477 20.1436 15.8074 20.1 15.1599 20.1145C12.6937 20.1945 10.4166 21.2276 8.73609 23.0245L8.71426 23.0464L8.70698 23.0536C8.24866 23.5484 7.84854 24.094 7.50661 24.6688C7.42659 24.7996 7.47023 24.9743 7.60118 25.0543L8.92524 25.8618C9.06346 25.9419 9.23807 25.8981 9.3181 25.76C9.58 25.3016 9.89282 24.8796 10.2493 24.4941L10.2638 24.4795L10.2711 24.4723C11.5661 23.0828 13.3193 22.2898 15.2182 22.2243C17.1169 22.1661 18.9212 22.8499 20.2962 24.1521L20.3252 24.174C21.0237 24.8215 21.7803 25.3889 22.5951 25.8691C22.7261 25.9491 22.9006 25.9055 22.9807 25.7745L23.7882 24.4505C23.8682 24.3195 23.8246 24.1376 23.6936 24.0649C23.0024 23.6575 22.3623 23.1773 21.7729 22.639C21.7657 22.6316 21.7584 22.6244 21.7512 22.6171L21.7439 22.6099C20.1579 21.1258 19.0594 19.2343 18.5574 17.139C18.3828 16.4115 18.2809 15.6621 18.2592 14.9056C18.2592 14.8983 18.2592 14.891 18.2592 14.8838C18.2301 14.0035 18.7757 13.2033 19.5904 12.8686C19.7068 12.8176 19.8306 12.7668 19.9469 12.7158C20.0997 12.643 20.2743 12.774 20.2452 12.9414C20.1361 13.5598 20.0924 14.1999 20.1069 14.8474C20.1871 17.3064 21.2201 19.5908 23.0171 21.2713L23.0243 21.2785L23.0388 21.2931L23.0461 21.3004C23.5408 21.7586 24.0864 22.1588 24.6612 22.5008C24.7922 22.5808 24.9667 22.5371 25.0468 22.4061L25.8543 21.0821C25.9343 20.9366 25.8907 20.762 25.7524 20.682ZM15.0508 16.1569C15.0363 16.1569 15.0217 16.1569 15.0072 16.1569C14.3816 16.1788 13.8651 15.684 13.8504 15.0584C13.8504 15.0511 13.8504 15.0511 13.8504 15.0438C13.8504 15.0365 13.8504 15.0365 13.8504 15.0293C13.8287 14.4036 14.3233 13.8798 14.9489 13.858C14.9563 13.858 14.9563 13.858 14.9636 13.858C14.9708 13.858 14.9708 13.858 14.9781 13.858C15.6037 13.8361 16.1276 14.3309 16.1493 14.9565C16.1493 14.9638 16.1493 14.9638 16.1493 14.971C16.1493 14.9784 16.1493 14.9784 16.1493 14.9856C16.1567 15.6113 15.6764 16.135 15.0508 16.1569Z"
+                                fill="#222222"></path>
+                        </svg>
+                        <h3>Our Empowerment</h3>
+                        <p>Through innovative, accessible, and reliable electronic solutions, we enable our customers to
+                            stay connected, informed, and in control. From smart devices that simplify daily tasks to
+                            tools that support learning, productivity, and securities, our electronics are designed to
+                            more enhance independence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- image -->
+            <div class="wide-image ">
+                <img src="./images/Image-4-min.jpg" alt="" loading="lazy">
+            </div>
+
+            <!-- partners -->
+            <div class="partners ">
+                <span class="label">Our Partners</span>
+                <h2>Elite Products from <span>Top Brands</span></h2>
+                <ul class="links">
+                    <li><a href="#"><img src="./images/brand1.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/brand2.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/brand3.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/brand4.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/brand6-100x32.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/brand7.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- end about page -->
+
+    <!-- start footer -->
+    <footer class="footer">
+        <div class="container ">
+            <!-- row 1 -->
+            <div class="top row g-4">
+                <div class="info col-lg-3 col-md-6">
+                    <div class="logo">
+                        <img src="./images/Logo.jpg" alt="XStore">
+                    </div>
+                    <ul>
+                        <li><span>Address:</span> 1234 Fashion Street, Suite 567, New York, NY</li>
+                        <li><span>Phone:</span> +123 456 7890</li>
+                        <li><span>Email:</span> info@example.com</li>
+                    </ul>
+                </div>
+                <div class="links col-lg-3 col-md-6">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="#">Headphones</a></li>
+                        <li><a href="#">Speakers</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Home Cinema</a></li>
+                        <li><a href="#">LED TVs</a></li>
+                        <li><a href="#">Sound Bars</a></li>
+                    </ul>
+                </div>
+                <div class="links col-lg-3 col-md-6">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Become a Retailer</a></li>
+                        <li><a href="#">Corporate Orders</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="#">Gifts Cards</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter col-lg-3 col-md-6">
+                    <h4>Stay Up to Date with New Releases</h4>
+                    <p>Get notified about new updates, products, tips and tutorials. No spam. You can always
+                        unsubscribe.</p>
+                    <form class="subscribe" action="#" method="post">
+                        <input type="email" name="email" placeholder="Your Email ID" required>
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- row 2 -->
+            <div class="middle d-flex justify-content-between align-items-center flex-wrap gap-4">
+                <div class="selects d-flex align-items-center gap-4">
+                    <div class="select">
+                        <div class="current"><span>EGP</span> <i class="uil uil-angle-down"></i></div>
+                        <div class="options">
+                            <span>USD $</span>
+                            <span>UK £</span>
+                        </div>
+                    </div>
+                    <div class="select">
+                        <div class="current"><span>English</span> <i class="uil uil-angle-down"></i></div>
+                        <div class="options">
+                            <span>العربية</span>
+                            <span>Français</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="payments">
+                    <img src="./images/payments-footer-img.png" alt="Accepted payment methods">
+                </div>
+                <ul class="socials d-flex gap-2">
+                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- row 3 -->
+            <div class="bottom d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <p>Copyright © 2026 <a href="#">XStore theme</a>. Created by Mahmoud.</p>
+                <ul class="policies d-flex flex-wrap gap-4">
+                    <li><a href="#">Terms &amp; Condition</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="./assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/splide.min.js"></script>
+    <script src="./js/about.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/splide.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Xstore | Contacts</title>
+</head>
+
+<body>
+    <div class="color-top"></div>
+    <div class="body-overlay"></div>
+    <div class="scrollTop show ">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- start nav -->
+    <nav class="home-nav">
+        <div class="container reveal">
+            <div class="side-menu">
+                <i class="uil uil-grip-horizontal-line"></i>
+            </div>
+            <div class="logo">
+                <img src="./images/Logo.jpg" alt="">
+            </div>
+            <div class="links">
+                <ul>
+                    <li ><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">OUR PRODUCTS</a></li>
+                    <li><a href="journal.html">JOURNAL</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li class="active"><a href="contacts.html">CONTACTS</a></li>
+            </div>
+            <div class="actives">
+                <div class="money">
+                    <div class="currency">EGP
+                        <i class="uil uil-angle-down down"></i>
+                        <i class="uil uil-angle-up up" style="display: none;"></i>
+                    </div>
+                    <div class="all_currency">
+                        <span>USD $</span>
+                        <span>UK £</span>
+                    </div>
+                </div>
+                <div class="icons">
+                    <ul>
+                        <li class="search"><i class="uil uil-search"></i></li>
+                        <li class="user"><i class="uil uil-user"></i></li>
+                        <li class="cart"><i class="uil uil-shopping-bag"></i>
+                            <span>0</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav -->
+
+    <!--side menu -->
+    <div class="menu" id="menu">
+        <i class="uil uil-times"></i>
+
+        <div class="container">
+            <div class="logo">
+                <img src="./images/Logo.jpg" alt="Logo">
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search for products...">
+                <i class="uil uil-search"></i>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">OUR PRODUCTS</a></li>
+                    <li><a href="journal.html">JOURNAL</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contacts.html">CONTACTS</a></li>
+                    <li><a href="login.html"><i class="uil uil-user"></i> ACCOUNT</a></li>
+                    <li><a href="cart.html"><i class="uil uil-shopping-bag"></i> CART £0.00</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--side menu -->
+
+    <!-- cart menu -->
+    <div class="cart-menu" id="cart-menu">
+        <i class="uil uil-times"></i>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><i class="uil uil-shopping-bag"></i> CART</a>
+            </div>
+
+            <div class="cart-title">No products in cart.</div>
+            <ul class="cart-items" hidden></ul>
+            <div class="cart-footer" hidden>
+                <div class="cart-total"><span>Subtotal:</span><strong>0.00 $</strong></div>
+                <button class="checkout-btn">CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+    <!-- cart menu -->
+
+    <!-- user menu -->
+    <div class="user-menu" id="user-menu">
+        <i class="uil uil-times"></i>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><i class="uil uil-user"></i> SIGN IN</a>
+            </div>
+
+            <form class="sign-form" action="#" method="post">
+                <div class="field">
+                    <label for="user-login">Username or email <span>*</span></label>
+                    <input type="text" id="user-login" name="login" required>
+                </div>
+                <div class="field">
+                    <label for="user-pass">Password <span>*</span></label>
+                    <input type="password" id="user-pass" name="password" required>
+                </div>
+                <div class="check-field">
+                    <input type="checkbox" id="checkbox" name="checkbox" required>
+                    <label for="checkbox">Remember me <span>*</span></label>
+                </div>
+                <button type="submit" class="signin-btn">LOGIN</button>
+            </form>
+
+            <a href="https://xstore.8theme.com/elementor3/minimal-tech/my-account/lost-password/" class="lost-pass">Lost
+                your password?</a>
+        </div>
+    </div>
+    <!-- user menu -->
+
+    <!-- search menu -->
+    <div class="search-menu" id="search-menu">
+        <i class="uil uil-times"></i>
+        <div class="container">
+            <h2 class="search-title">What Are You Looking For?</h2>
+
+            <form class="search-form" action="#" method="get">
+                <select name="category">
+                    <option value="">All Categories</option>
+                    <option value="camera">Camera</option>
+                    <option value="computer">Computer</option>
+                    <option value="controller">Controller</option>
+                    <option value="drone">Drone</option>
+                    <option value="earbuds">Earbuds</option>
+                    <option value="headphone">Headphone</option>
+                    <option value="tablets">Tablets</option>
+                    <option value="speakers">Speakers</option>
+                    <option value="phones">Phones</option>
+                    <option value="chargers">Chargers</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+                <input type="text" name="s" placeholder="Search for products">
+                <button type="submit"><i class="uil uil-search"></i> SEARCH</button>
+            </form>
+
+            <h3 class="popular-title">Popular categories</h3>
+
+            <ul class="popular-categories">
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon.svg"
+                            alt="">
+                        <h4>CAMERA</h4>
+                        <span>12 products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon-4.svg"
+                            alt="">
+                        <h4>COMPUTER</h4>
+                        <span>12 products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon-2.svg"
+                            alt="">
+                        <h4>CONTROLLER</h4>
+                        <span>13 products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon-8.svg"
+                            alt="">
+                        <h4>DRONE</h4>
+                        <span>14 products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon-6.svg"
+                            alt="">
+                        <h4>EARBUDS</h4>
+                        <span>15 products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://xstore.8theme.com/elementor3/minimal-tech/wp-content/uploads/sites/22/2026/03/Icon-1.svg"
+                            alt="">
+                        <h4>HEADPHONE</h4>
+                        <span>15 products</span>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="view-all-btn">VIEW ALL CATEGORIES</button>
+        </div>
+    </div>
+    <!-- search menu -->
+
+
+    <!-- start contacts page -->
+    <section class="shop">
+        <div class="banner header">
+            <h1>Have questions or need <span>assistance?</span></h1>
+            <p>Our team is here to help. Contact us today to learn more and how we can help you achieve your goals.</p>
+        </div>
+
+        <div class="container">
+            <div class="contacts ">
+                <!-- form -->
+                <div class="form">
+                    <h2>Contact Us</h2>
+                    <form action="#" method="post">
+                        <div class="names">
+                            <div class="field">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first_name" required>
+                            </div>
+                            <div class="field">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last_name" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="email-id">Email ID</label>
+                            <input type="email" id="email-id" name="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit">SEND A MESSAGE</button>
+                    </form>
+                </div>
+
+                <!-- store info -->
+                <div class="info">
+                    <h2>Discover our store</h2>
+                    <p>We'd love to hear from you. Our team is here to help. Let your customers get in touch with you by
+                        filling out the email form below.</p>
+                    <div class="item">
+                        <h4>Phone</h4>
+                        <p><a href="tel:+91180034345656">+91 1800 3434 5656</a></p>
+                        <p><a href="tel:+91180044449898">+91 1800 4444 9898</a></p>
+                    </div>
+                    <div class="item">
+                        <h4>Email</h4>
+                        <p><a href="mailto:contact@xstoreinfo.com">contact@xstoreinfo.com</a></p>
+                    </div>
+                    <div class="item">
+                        <h4>Address</h4>
+                        <p>PO Box 16122 Collins Street West Victoria 8007 Australia</p>
+                        <p>1800 Flinders Road St, Melbourne Victoria, 3000 Australia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end contacts page -->
+
+    <!-- start footer -->
+    <footer class="footer">
+        <div class="container ">
+            <!-- row 1 -->
+            <div class="top row g-4">
+                <div class="info col-lg-3 col-md-6">
+                    <div class="logo">
+                        <img src="./images/Logo.jpg" alt="XStore">
+                    </div>
+                    <ul>
+                        <li><span>Address:</span> 1234 Fashion Street, Suite 567, New York, NY</li>
+                        <li><span>Phone:</span> +123 456 7890</li>
+                        <li><span>Email:</span> info@example.com</li>
+                    </ul>
+                </div>
+                <div class="links col-lg-3 col-md-6">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="#">Headphones</a></li>
+                        <li><a href="#">Speakers</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Home Cinema</a></li>
+                        <li><a href="#">LED TVs</a></li>
+                        <li><a href="#">Sound Bars</a></li>
+                    </ul>
+                </div>
+                <div class="links col-lg-3 col-md-6">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Become a Retailer</a></li>
+                        <li><a href="#">Corporate Orders</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="#">Gifts Cards</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter col-lg-3 col-md-6">
+                    <h4>Stay Up to Date with New Releases</h4>
+                    <p>Get notified about new updates, products, tips and tutorials. No spam. You can always
+                        unsubscribe.</p>
+                    <form class="subscribe" action="#" method="post">
+                        <input type="email" name="email" placeholder="Your Email ID" required>
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- row 2 -->
+            <div class="middle d-flex justify-content-between align-items-center flex-wrap gap-4">
+                <div class="selects d-flex align-items-center gap-4">
+                    <div class="select">
+                        <div class="current"><span>EGP</span> <i class="uil uil-angle-down"></i></div>
+                        <div class="options">
+                            <span>USD $</span>
+                            <span>UK £</span>
+                        </div>
+                    </div>
+                    <div class="select">
+                        <div class="current"><span>English</span> <i class="uil uil-angle-down"></i></div>
+                        <div class="options">
+                            <span>العربية</span>
+                            <span>Français</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="payments">
+                    <img src="./images/payments-footer-img.png" alt="Accepted payment methods">
+                </div>
+                <ul class="socials d-flex gap-2">
+                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- row 3 -->
+            <div class="bottom d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <p>Copyright © 2026 <a href="#">XStore theme</a>. Created by Mahmoud.</p>
+                <ul class="policies d-flex flex-wrap gap-4">
+                    <li><a href="#">Terms &amp; Condition</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="./assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/contacts.js"></script>
+</body>
+
+</html>
