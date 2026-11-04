@@ -263,6 +263,12 @@ const cartItems = document.querySelector(".cart-items");
 const cartTitle = document.querySelector(".cart-title");
 const cartFooter = document.querySelector(".cart-footer");
 const cartTotal = document.querySelector(".cart-total strong");
+// Delete Alert
+const deleteAlert = document.getElementById("deleteAlert");
+const cancelDeleteBtn = document.querySelector(".cancel-btn");
+const confirmDeleteBtn = document.querySelector(".remove-btn");
+
+let productIdToDelete = null;
 
 // the cart is saved in localStorage, so it stays when the page changes
 function loadCart() {
@@ -321,7 +327,11 @@ function changeQuantity(id, step) {
   item.quantity += step;
 
   if (item.quantity < 1) {
-    removeFromCart(id);
+
+    productIdToDelete = id;
+    deleteAlert.classList.add("active");
+
+    item.quantity = 1;
     return;
   }
 
@@ -378,7 +388,25 @@ cartItems.addEventListener("click", (e) => {
 
   if (e.target.closest(".plus")) changeQuantity(id, 1);
   if (e.target.closest(".minus")) changeQuantity(id, -1);
-  if (e.target.closest(".remove")) removeFromCart(id);
+  if (e.target.closest(".remove")) {
+    productIdToDelete = id;
+    deleteAlert.classList.add("active");
+  }
+
+  cancelDeleteBtn.addEventListener("click", () => {
+    deleteAlert.classList.remove("active");
+    productIdToDelete = null;
+  });
+
+  confirmDeleteBtn.addEventListener("click", () => {
+    if (productIdToDelete === null) {
+      return
+    } else {
+      removeFromCart(productIdToDelete);
+      deleteAlert.classList.remove("active");
+      productIdToDelete = null;
+    }
+  });
 });
 // end cart
 

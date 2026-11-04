@@ -157,31 +157,25 @@ const cartItems = document.querySelector(".cart-items");
 const cartTitle = document.querySelector(".cart-title");
 const cartFooter = document.querySelector(".cart-footer");
 const cartTotal = document.querySelector(".cart-total strong");
+// Delete Alert
+const deleteAlert = document.getElementById("deleteAlert");
+const cancelDeleteBtn = document.querySelector(".cancel-btn");
+const confirmDeleteBtn = document.querySelector(".remove-btn");
+
+let productIdToDelete = null;
 
 // the cart is saved in localStorage, so it stays when the page changes
 function loadCart() {
-    try {
-        return JSON.parse(localStorage.getItem(CART_KEY)) || [];
-    } catch (e) {
-        return [];
-    }
+    return JSON.parse(localStorage.getItem(CART_KEY)) || [];
 }
 
 function saveCart() {
-    try {
-        localStorage.setItem(CART_KEY, JSON.stringify(cart));
-    } catch (e) {}
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 
 let cart = loadCart();
 
-const getQuantity = () => cart.reduce((sum, { quantity }) => sum + quantity, 0);
-cateCounter.textContent = getQuantity();
 
-function updateCart() {
-    saveCart();
-    renderCart();
-}
 
 function addToCart(id) {
     const item = cart.find((product) => product.id === id);
@@ -196,20 +190,32 @@ function addToCart(id) {
     iconCm.click();
 }
 
+const getQuantity = () => cart.reduce((sum, { quantity }) => sum + quantity, 0);
+cateCounter.textContent = getQuantity();
+
+function removeFromCart(id) {
+    cart = cart.filter((product) => product.id !== id);
+    updateCart();
+}
+function updateCart() {
+    saveCart();
+    renderCart();
+}
+
+
 function changeQuantity(id, step) {
     const item = cart.find((product) => product.id === id);
     item.quantity += step;
 
     if (item.quantity < 1) {
-        removeFromCart(id);
+
+        productIdToDelete = id;
+        deleteAlert.classList.add("active");
+
+        item.quantity = 1;
         return;
     }
 
-    updateCart();
-}
-
-function removeFromCart(id) {
-    cart = cart.filter((product) => product.id !== id);
     updateCart();
 }
 
@@ -258,11 +264,30 @@ cartItems.addEventListener("click", (e) => {
 
     if (e.target.closest(".plus")) changeQuantity(id, 1);
     if (e.target.closest(".minus")) changeQuantity(id, -1);
-    if (e.target.closest(".remove")) removeFromCart(id);
+    if (e.target.closest(".remove")) {
+        productIdToDelete = id;
+        deleteAlert.classList.add("active");
+    }
+
+    cancelDeleteBtn.addEventListener("click", () => {
+        deleteAlert.classList.remove("active");
+        productIdToDelete = null;
+    });
+
+    confirmDeleteBtn.addEventListener("click", () => {
+        if (productIdToDelete === null) {
+            return
+        } else {
+            removeFromCart(productIdToDelete);
+            deleteAlert.classList.remove("active");
+            productIdToDelete = null;
+        }
+    });
 });
 // end cart
 
 loadProducts();
+
 
 
 // start footer

@@ -235,6 +235,12 @@ const cartItems = document.querySelector(".cart-items");
 const cartTitle = document.querySelector(".cart-title");
 const cartFooter = document.querySelector(".cart-footer");
 const cartTotal = document.querySelector(".cart-total strong");
+// Delete Alert
+const deleteAlert = document.getElementById("deleteAlert");
+const cancelDeleteBtn = document.querySelector(".cancel-btn");
+const confirmDeleteBtn = document.querySelector(".remove-btn");
+
+let productIdToDelete = null;
 
 // the cart is saved in localStorage, so it stays when the page changes
 function loadCart() {
@@ -286,7 +292,11 @@ function changeQuantity(id, step) {
   item.quantity += step;
 
   if (item.quantity < 1) {
-    removeFromCart(id);
+
+    productIdToDelete = id;
+    deleteAlert.classList.add("active");
+
+    item.quantity = 1;
     return;
   }
 
@@ -342,34 +352,32 @@ cartItems.addEventListener("click", (e) => {
 
   if (e.target.closest(".plus")) changeQuantity(id, 1);
   if (e.target.closest(".minus")) changeQuantity(id, -1);
-  if (e.target.closest(".remove")) removeFromCart(id);
+  if (e.target.closest(".remove")) {
+    productIdToDelete = id;
+    deleteAlert.classList.add("active");
+  }
+
+  cancelDeleteBtn.addEventListener("click", () => {
+    deleteAlert.classList.remove("active");
+    productIdToDelete = null;
+  });
+
+  confirmDeleteBtn.addEventListener("click", () => {
+    if (productIdToDelete === null) {
+      return
+    } else {
+      removeFromCart(productIdToDelete);
+      deleteAlert.classList.remove("active");
+      productIdToDelete = null;
+    }
+  });
 });
 // end cart
 
-// function renderPagination(totalPages) {
-//   if (totalPages === 1) {
-//     pagination.innerHTML = "";
-//     return;
-//   }
-
-//   const numbers = Array.from({ length: totalPages }, (_, i) => i + 1)
-//     .map(
-//       (page) =>
-//         `<li><button type="button" data-page="${page}" class="${page === state.page ? "active" : ""}">${page}</button></li>`,
-//     )
-//     .join("");
-
-//   pagination.innerHTML = `
-//     <li><button type="button" data-page="${state.page - 1}" aria-label="Previous page" ${state.page === 1 ? "disabled" : ""}><i class="uil uil-angle-left"></i></button></li>
-//     ${numbers}
-//     <li><button type="button" data-page="${state.page + 1}" aria-label="Next page" ${state.page === totalPages ? "disabled" : ""}><i class="uil uil-angle-right"></i></button></li>
-//   `;
-// }
 
 function render() {
   const filtered = getFiltered();
-  // const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
-  // state.page = Math.min(state.page, totalPages);
+
 
   const start = (state.page - 1) * PER_PAGE;
   const items = filtered.slice(start, start + PER_PAGE);
@@ -384,7 +392,7 @@ function render() {
       button.dataset.category === state.category,
     );
   });
-  // renderPagination(totalPages);
+
 }
 
 function update(changes) {
@@ -404,15 +412,6 @@ quickTags.addEventListener("click", (e) => {
 sortSelect.addEventListener("change", () => {
   update({ sort: sortSelect.value });
 });
-
-// pagination.addEventListener("click", (e) => {
-//   const button = e.target.closest("button");
-//   if (!button) return;
-
-//   state.page = Number(button.dataset.page);
-//   render();
-//   toolbar.scrollIntoView({ behavior: "smooth" });
-// });
 
 loadProducts();
 // end products page
